@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coma Care Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Footer Styling */
+        .footer.bg-dark {
+            background-color: #4682B4 !important;
+            color: white;
+            padding: 20px;
+        }
+
+        .form-group{
+            text-align: center;
+
+        }
+        /* Navbar Styling */
+        .navbar.navbar-light.bg-light {
+            background-color: #4682B4 !important;
+        }
+        .nav-item .nav-link { 
+            color: white !important;
+            font-weight: 700 !important;
+        }
+
+        /* Jumbotron Styling */
+        .jumbotron {
+            background-image: url("{{ url_for('static', filename='image/image.png') }}");
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+
+        h6{
+            color: rgb(78, 178, 35);
+        }
+        /* Container Styling */
+        .container {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* List Styling */
+        ul {
+            list-style-type: square;
+        }
+        .display-4 {
+            color: black;
+            font-size: larger;
+            margin-left: 67%;
+            margin-top: 5%;
+            font-weight: bolder;
+            color: rgb(5, 5, 108);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .nav-item{
+            color: white;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .submitclass
+        {
+            background-color: #4682B4;
+            color: white;
+            text-align:center !important;
+            margin-left: 150px;
+            
+        }
+
+         .reference-link {
+            color: #4682B4 !important;
+        }
+        .reference-link:hover {
+            text-decoration: underline !important;
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #4682B4;
+            
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px !important;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4682B4 !important;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ca5;
+        }
+
+        /* .classinputt{
+        background-color: #4682B4 !important;
+        margin-left: 20px;
+        } */
+        /* Styled paragraph */
+        .styled-paragraph {
+            color: rgb(5, 5, 108);
+            /* font-weight: bold; */
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="{{ url_for('static', filename='image/logo-nrevive.png') }}" alt="NRevive Logo" width="100" height="50">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="model.html">Models</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="result.html">Casestudy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+ 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="styled-paragraph">
+                 <h3>CLINICAL HISTORY:</h3>
+                 <h6>Case 268 -- A Girl in Coma</h6>
+                <p>
+                   
+A 15 year-old girl with unremarkable past medical history found unresponsive near her bed, 5min later she had an attack of tonic/clonic convulsion which lasted one minute with bluish discoloration of lips but no loss of sphincter control. Neither empty bottles nor pills found near her. She was rushed to the Hospital were she was admitted to PICU. Physical Examination was unremarkable apart from deep coma and gross hematuria. CT scan of the head was normal, EEG showed: Alfa wave coma c/w drug intoxication and Echocardiogram showed left ventricular dysfunction and multiple valve leakage.</p>
+        
+  <p> <h6>Reference: </h6>The University of Pittsburgh Medical Center (UPMC) <a href="https://path.upmc.edu/cases/case268.html" class="reference-link">https://path.upmc.edu/cases/case268.html</a></p>
+</div>
+
+        </div>
+        <div class="col-md-6">
+            <form id="case-study-form" action="/casestudypredict" method="post">
+                <div class="form-group">
+                    <img src="{{ url_for('static', filename='image/image.png') }}" alt="NRevive Logo" width="370" height="70">
+                </div>
+
+                <div class="form-group">
+                    <label for="Hb">Hb:</label>
+                    <input type="text" id="Hb" name="Hb" class="classinputt">
+                </div>
+
+                <div class="form-group">
+                    <label for="Platelets">Platelets:</label>
+                    <input type="text" id="Platelets" name="Platelets" class="input">
+                </div>
+
+                <div class="form-group">
+                    <label for="Na">Na:</label>
+                    <input type="text" id="Na" name="Na" class="input">
+                </div>
+
+                <input type="submit" value="Submit"  class="submitclass">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="prediction-result"></div>
+
+<footer class="bg-dark text-light py-5 footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <!-- Company Logo and Slogan -->
+                <img src="{{ url_for('static', filename='image/logo-nrevive.png') }}" alt="NRevive Logo" width="100" height="80">
+                <p class="mb-0">Reviving Lives, Renewing Hope</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <!-- Social Media Links -->
+                <h5 class="mb-3">Follow Us</h5>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <!-- Contact Information -->
+                <h5 class="mb-3">Contact Us</h5>
+                <p class="mb-2"><i class="fas fa-envelope mr-2"></i>Email: <a href="mailto:nidaaawawdeh@outlook.sa" class="text-light">nidaaawawdeh@outlook.sa</a></p>
+                <p class="mb-0"><i class="fas fa-phone-alt mr-2"></i>Phone: +1234567890</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("case-study-form").addEventListener("submit", function(event){
+        event.preventDefault(); // Prevent default form submission
+        var form = event.target;
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action);
+        xhr.onload = function(){
+            if(xhr.status === 200){
+                document.getElementById("prediction-result").innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send(formData);
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

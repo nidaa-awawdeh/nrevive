@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coma Care Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Footer Styling */
+        .footer.bg-dark {
+            background-color: #4682B4 !important;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Navbar Styling */
+        .navbar.navbar-light.bg-light {
+            background-color: #4682B4 !important;
+        }
+.nav-item .nav-link { 
+   color: white !important;
+   font-weight: 700 !important;
+}
+        /* Jumbotron Styling */
+        .jumbotron {
+            background-image: url("{{ url_for('static', filename='image/image.png') }}");
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+
+        /* Container Styling */
+        .container {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        /* List Styling */
+        ul {
+            list-style-type: square;
+        }
+      .display-4 {
+            color: black;
+            font-size: larger;
+            margin-left: 67%;
+            margin-top: 5%;
+            font-weight: bolder;
+            color: rgb(5, 5, 108);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .nav-item{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="{{ url_for('static', filename='image/logo-nrevive.png') }}" alt="NRevive Logo" width="100" height="50">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="model.html">Models</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="result.html">Casestudy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+        <!-- <img src="{{ url_for('static', filename='image/image.png') }}" alt="background" > -->
+        <h1 class="display-4  h1coma">Coma Care Assistant</h1>
+        <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis volutpat eros, id pretium est efficitur a.</p> -->
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <h2 class="mb-4">Causes of Medical Coma</h2>
+    <p>Medical coma can be induced by various causes including:</p>
+    <ul>
+        <li>Traumatic brain injury</li>
+        <li>Stroke</li>
+        <li>Severe infections such as meningitis or encephalitis</li>
+        <li>Drug overdose</li>
+        <li>Severe metabolic disturbances</li>
+        <li>Cardiac arrest</li>
+        <!-- <img src="{{ url_for('static', filename='image/image1.png') }}" alt="backgroundbody" > -->
+    </ul>
+
+    <h2 class="mb-4">Treatment and Management</h2>
+    <p>The primary goal of inducing a medical coma is to protect the brain and allow it to heal. Treatment and management involve:</p>
+    <ul>
+        <li>Continuous monitoring of vital signs</li>
+        <li>Adjustment of medications to maintain the desired level of unconsciousness</li>
+        <li>Regular neurological assessments</li>
+        <li>Prevention and management of complications such as infections and bedsores</li>
+    </ul>
+
+    <h2 class="mb-4">Prognosis</h2>
+    <p>The prognosis for patients in a medical coma depends on the underlying cause, the duration of the coma, and the overall health of the patient. Some patients may recover fully, while others may have long-term neurological deficits.</p>
+</div>
+
+<hr>
+<footer class="bg-dark text-light py-5 footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <!-- Company Logo and Slogan -->
+                <img src="{{ url_for('static', filename='image/logo-nrevive.png') }}" alt="NRevive Logo" width="100" height="80">
+                <p class="mb-0">Reviving Lives, Renewing Hope</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <!-- Social Media Links -->
+                <h5 class="mb-3">Follow Us</h5>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <!-- Contact Information -->
+                <h5 class="mb-3">Contact Us</h5>
+                 <p class="mb-2"><i class="fas fa-envelope mr-2"></i>Email: <a href="mailto:nidaaawawdeh@outlook.sa" class="text-light">nidaaawawdeh@outlook.sa</a></p>
+                <p class="mb-0"><i class="fas fa-phone-alt mr-2"></i>Phone: +1234567890</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

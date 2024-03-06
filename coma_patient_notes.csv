@@ -1,0 +1,7 @@
+
+medical_notes,coma_severity,recovery_likelihood,complication_risk
+"Patient admitted with head trauma. GCS score of 8 upon arrival. No response to stimuli.",Severe,Likely,High
+"Patient has been in coma for 3 days following a car accident. GCS score fluctuating between 5 and 7.",Severe,Likely,Medium
+"Comatose patient with unknown etiology. No significant changes in condition over the past week.",Moderate,Possible,Low
+"Patient with drug overdose. Coma induced by toxic substances. Vital signs stable but unresponsive.",Moderate,Possible,Medium
+"Traumatic brain injury resulting in coma. GCS score of 3 upon admission. No signs of improvement.",Severe,Unlikely,High

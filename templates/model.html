@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coma Care Assistant</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Custom styles */
+        .navbar.navbar-light.bg-light {
+            background-color: #4682B4 !important;
+        }
+        .nav-item .nav-link { 
+   color: white !important;
+   font-weight: 700 !important;
+}
+        .footer.bg-dark {
+            background-color: #4682B4 !important;
+            color: white;
+            padding: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333; /* Main text color */
+        }
+        .titlestartup {
+            color: #259256; /* Title color */
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #259256 !important;
+            border-color: #259256 !important;
+        }
+        .btn-primary:hover {
+            background-color: #1e7e65 !important;
+            border-color: #1e7e65 !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="{{ url_for('static', filename='image/logo-nrevive.png') }}" alt="NRevive Logo" width="100" height="50">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="model.html">Models</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="casestudy.html">Casestudy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>    <div class="container">
+        <h1 class="titlestartup"> Coma Care Assistant</h1>
+        <div class="form-container">
+            <img src="{{ url_for('static', filename='image/image.png') }}" alt="NRevive Logo" width="450" height="110">
+            <form action="/predict" method="post">
+                <div class="form-group">
+                    <label for="medical_notes">Enter Medical Notes:</label>
+                    <textarea class="form-control" id="medical_notes" name="medical_notes" rows="4" cols="50"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+            <div class="mt-4">
+                {% if prediction_severity %}
+                    <h3>Predictions:</h3>
+                    <p>Coma Severity: {{ prediction_severity }}</p>
+                    <p>Recovery Likelihood: {{ prediction_recovery }}</p>
+                    <p>Complication Risk: {{ prediction_complication }}</p>
+                {% endif %}
+                {% if error_message %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error_message }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                  <img src="{{ url_for('static', filename='image/logo-nrevive.png') }}" alt="NRevive Logo" width="100" height="80">
+                    <p class="mb-0">Revolutionizing the industry with innovative solutions</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Follow Us</h5>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Contact Us</h5>
+                     <p class="mb-2"><i class="fas fa-envelope mr-2"></i>Email: <a href="mailto:nidaaawawdeh@outlook.sa" class="text-light">nidaaawawdeh@outlook.sa</a></p>
+                    <p class="mb-0"><i class="fas fa-phone-alt mr-2"></i>Phone: +1234567890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

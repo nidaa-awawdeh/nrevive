@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Startup X</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+          .navbar.navbar-light.bg-light {
+            background-color: #4682B4 !important;
+        }
+        .nav-item .nav-link { 
+   color: white !important;
+   font-weight: 700 !important;
+}
+   .footer.bg-dark {
+            background-color: #4682B4 !important;
+            color: white;
+            padding: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        *{
+            color:hwb(240 0% 70%);
+        }
+        .titlestartup{
+           color:hwb(240 0% 70%); 
+           font-size: 150px; 
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 70%;
+            margin-bottom: 20px;
+        }
+        .team-member h3 {
+            margin-bottom: 10px;
+        }
+        .text-center.mb-5{
+            color: #259256;
+            margin-top:0px;
+        }
+      
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="{{ url_for('static', filename='image/logo-nrevive.png') }}" alt="NRevive Logo" width="100" height="50">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="model.html">Models</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="casestudy.html">Casestudy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="titlestartup">NRevive </h2>
+                   <p>
+Our project aims to develop a state-of-the-art web application tailored for healthcare providers managing coma patients. Leveraging Natural Language Processing (NLP) techniques, it analyzes medical notes to offer insights into coma severity, recovery prediction, and potential complications. Our platform revolutionizes coma patient care by providing actionable data and enhancing decision-making for healthcare professionals.</p>
+                </div>
+                <div class="col-md-6">
+                   <img src="{{ url_for('static', filename='image/image1.png') }}" alt="NRevive " width="600" height="300">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="bg-light py-5">
+        <div class="container team">
+            <h2 class="text-center mb-5">"Make your experience a story, not a number"</h2>
+         
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member text-center">
+                     <img src="{{ url_for('static', filename='image/Nidaa.jpg') }}" alt="Nidaa " width="100" height="100">
+      
+                        <h3>Nidaa Awawda</h3>
+                        <p>Co-founder & CEO</p>
+                    </div>
+                </div>
+                  <div class="col-md-4">
+                   
+                    <div class="team-member text-center">
+                  <p>  
+I'am storyteller ,believer,Commander and stategist person .Working for me is my favorite hobby of discovering new things, maybe I feel tired or in pain sometimes, but later on I feel this fatigue was my pleasure in achieving professional accomplishments. </p>
+                    </div>
+                </div>
+              
+                  <div class="col-md-4">
+                    <div class="team-member text-center">
+                   <p> I have big dreams seeking to change the world, can not a girl like me change the world asking the stranger about me? And I'm answering all those crazy people who think they can change the world, really changing the world with great amazement to humans. I want to change the lives of millions of disabled people, children and women with education and technology. This is my goal until my death.</p>
+                    </div>
+                </div>
+             
+                </div>
+            </div>
+        </div>
+    </section> 
+    
+    
+
+    <!-- Footer -->
+  <footer class="bg-dark text-light py-5 footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <img src="logo.png" alt="Startup X Logo">
+                    <p class="mb-0">Revolutionizing the industry with innovative solutions</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Follow Us</h5>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i>Email: <a href="mailto:nidaaawawdeh@outlook.sa" class="text-light">nidaaawawdeh@outlook.sa</a></p>
+                    <p class="mb-0"><i class="fas fa-phone-alt mr-2"></i>Phone: +1234567890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
