@@ -55,9 +55,4 @@ The development of this web-based application aligns with the healthcare industr
 ## Figma Link 
 - [Figma Link ](https://www.figma.com/file/03zx1f6hh59lTVJcmOGw4O/nrevive?type=design&node-id=1%3A7&mode=design&t=up9aNXbwBHOb0mHk-1)
 
-## NReviveDesgin
 
-* ![home](/image/homepage.png?raw=true)
-* ![casestudy(/image/casestudy.png?raw=true)
-* ![model](/image/model.png?raw=true)
-* ![home](/image/homepage.png?raw=true)
