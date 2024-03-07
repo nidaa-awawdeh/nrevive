@@ -2,6 +2,10 @@
  AI-Powered Coma Care Assistant.
 ## Objective
 The objective of this project is to develop a comprehensive web-based application that supports healthcare providers in managing coma patients. It leverages Natural Language Processing (NLP) techniques to analyze medical notes and provide valuable insights into various aspects of coma management, including severity assessment, prediction of recovery, and identification of potential complications or outcomes.
+
+##Demo
+[![Watch the Demo](https://img.youtube.com/vi/ouhPDjutr1w/0.jpg)](https://www.youtube.com/watch?v=ouhPDjutr1w)
+
 ## Components
 
 ### Flask Backend (`app.py`)
